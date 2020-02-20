@@ -21,3 +21,22 @@ The files contained within are as following:
             e. search.html is the page where the user can search for book by the author, title, year or isbn
 4. helper.py is where I stored the login_required function so as to prevent unregistered users from accessing the site. It also contains a function I did not actually use
 5. requirements.txt I also included requests which I had not installed.
+
+Getting Started
+
+To run this web app a PostgreSQL database must be used. It's possible to set up PostgreSQL locally on your own computer.
+
+1. Navigate to https://www.heroku.com/, and create an account if you don’t already have one.
+2. On Heroku’s Dashboard, click “New” and choose “Create new app.”
+3. Give your app a name, and click “Create app.”
+4. On your app’s “Overview” page, click the “Configure Add-ons” button.
+5. In the “Add-ons” section of the page, type in and select “Heroku Postgres.”
+6. Choose a plan, which will give you access to a free PostgreSQL database that will support up to 10,000 rows of data. Click “Provision.”
+7. Now, click the “Heroku Postgres :: Database” link.
+8. You should now be on your database’s overview page. Click on “Settings”, and then “View Credentials.” This is the information you’ll need to log into your database. You can access the database via Adminer, filling in the server (the “Host” in the credentials list), your username (the “User”), your password, and the name of the database, all of which you can find on the Heroku credentials page.
+
+To run the web app:
+
+1. Run pip install -r requirements.txt
+2. Set the environment varibel FLASK_APP to be application.py and set the DATABASE_URL to be the URI of your database.
+3. Run flask run
